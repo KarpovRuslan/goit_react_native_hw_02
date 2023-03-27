@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import {
@@ -175,7 +175,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "flex-end",
-    width: "100%",
   },
   photoContainer: {
     marginTop: -60,
@@ -235,12 +234,14 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   backGroundFrame: {
-    backgroundColor: "white",
+    backgroundColor: "#fff",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     alignItems: "center",
   },
-  form: { marginHorizontal: 16, alignItems: "center" },
+  form: {
+    marginHorizontal: 16,
+  },
   button: {
     backgroundColor: "#FF6C00",
     marginBottom: 16,

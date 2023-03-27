@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, ImageBackground } from "react-native";
+import { StyleSheet, View, ImageBackground, Dimensions } from "react-native";
 import LoginScreen from "./LoginScreen/LoginScreen";
 import RegistrationScreen from "./RegistrationScreen/RegistrationScreen";
 
@@ -27,11 +27,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFFFFF",
+    justifyContent: "flex-end",
   },
   image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "flex-end",
+    // flex: 1,
+    // resizeMode: "cover",
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
+    //justifyContent: "flex-end",
   },
 });
